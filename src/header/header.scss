@@ -1,0 +1,28 @@
+@import './../color-vars.scss';
+.header {
+  &__container {
+    width: 100%;
+    background-color: $primary;
+    padding: 15px;
+  }
+  &__icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  &__menu {
+    background: url('./../assets/icons/menu.png');
+    background-size: cover;
+  }
+  &__close {
+    background: url('./../assets/icons/close.png');
+    z-index:2;
+    position: absolute;
+    background-size: cover;
+    left: 16%;
+  }
+  &__hidden {
+    display: none;
+  }
+}
