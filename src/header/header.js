@@ -26,7 +26,7 @@ class Header extends React.Component{
       <div className={`${componentName}__container`}>
         <i className={`${componentName}__icon ${this.state.isNavbarHidden?`${componentName}__menu`:`${componentName}__close`}`} onClick={this.toggleNavbar}></i>
 
-        { !this.state.isNavbarHidden && <Navbar handleNavOptions = {this.props.handleNavOptions} /> }
+        { !this.state.isNavbarHidden && <Navbar handleNavOptions = {this.props.handleNavOptions}/> }
       </div>
     )
   }

@@ -19,11 +19,11 @@ class Note extends React.Component{
 }
 
   handleChange = event => {
-    event.persist();
+    const {name,value} = event;
     this.setState(prevState => ({
         note: {
           ...prevState.note,
-          [event.target.name]: event.target.value
+          [name]: value
         }
       }));
 

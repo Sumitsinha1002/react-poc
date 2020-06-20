@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
-import Note from './notes/notes'
-import './content.scss'
+import Note from './notes/notes';
+import Weather from './weather/weather';
+import './content.scss';
 
 class Content extends React.Component{
   constructor() {
@@ -18,7 +19,6 @@ class Content extends React.Component{
   }
 
   updateNote = note => {
-    console.log(note);
     this.setState(prev => ({
         notesData: prev.notesData.map(item => item.id === note.id ? { id: note.id, text: note.text, title: note.title } : item)
     }))
@@ -58,6 +58,8 @@ class Content extends React.Component{
           <div className={`${componentName}__no-data`}></div>
           <p className={`${componentName}__message`}>No Notes found. Click Add Note to add one</p>
           </Fragment> }
+         {this.props.activeContent === 'Weather' &&
+          <Weather/>}
       </div>
     )
   }

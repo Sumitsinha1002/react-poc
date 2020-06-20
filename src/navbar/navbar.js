@@ -17,7 +17,7 @@ class Navbar extends React.Component{
     return(
       <div className= {`${componentName}`}>
         <a onClick = {this.onMenuClicked}>Notes</a>
-        <a href="#">Services</a>
+        <a onClick = {this.onMenuClicked}>Weather</a>
         <a href="#">Clients</a>
         <a href="#">Contact</a>
       </div>

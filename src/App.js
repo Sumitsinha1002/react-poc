@@ -1,6 +1,6 @@
 import React from 'react';
 import Content from './content/content';
-import Header from './header/header'
+import Header from './header/header';
 import './App.css';
 
 class App extends React.Component {
@@ -10,7 +10,7 @@ class App extends React.Component {
     super();
 
     this.state = {
-      activeContent: 'Notes'
+      activeContent: 'Weather'
     }
   }
   handleNavOptions= (menu) => {
