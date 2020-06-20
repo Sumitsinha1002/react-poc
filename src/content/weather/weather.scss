@@ -1,0 +1,57 @@
+@import './../../color-vars.scss';
+
+.current-div {
+  transform: translate(0px, 28%);
+    width: 40%;
+    margin: 0 auto;
+    display:flex;
+}
+
+.current-info {
+  flex: 1 1 auto;
+  color: $primary;
+
+  &.text {
+    font-size: 1.2em;
+  }
+}
+
+.current-icon {
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+.city-header {
+  font-size: 3em;
+  margin-top: 0;
+}
+
+.day-header{
+  font-size: 2em;
+  margin: 0;
+}
+
+
+
+.predict-div {
+  display: inline-block;
+  width: 7%;
+  background: $primary-extralight;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 6px;
+  border: 2px solid $primary;
+  transform: translateY(80%);
+  color: $primary;
+}
+
+.wi-predict {
+  font-size: 50px;
+  margin: 10px;
+  color: $primary;
+}
+
+.wi-current {
+  font-size: 300px;
+  color: $primary;
+}

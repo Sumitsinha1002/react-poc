@@ -1,0 +1,95 @@
+import React from 'react';
+import weather from 'openweather-apis';
+import './weather.scss';
+import './../../assets/weather-icons-master/css/weather-icons.css'
+import { transformData } from './../../utils/weather-data-transform'
+
+let url = 'http://ip-api.com/json';
+let appId = '84c61d20a8a097b1fd8195c838ad28b7';
+weather.setLang('en');
+weather.setAPPID(appId);
+let weatherUrl = 'http://api.openweathermap.org/data/2.5/onecall?';
+let lat, lon, city;
+
+class Weather extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      weatherData: []
+    }
+    this.getPrediction = this.getPrediction.bind(this);
+  }
+
+  getPrediction() {
+    fetch(weatherUrl+`lat=${lat}&lon=${lon}&%20exclude=hourly,daily&appid=${appId}`)
+      .then(response => response.json())
+      .then(data => {
+        let transformedData = transformData(data);
+        this.setState(()=> {
+          return {
+            weatherData: transformedData
+          }
+        })
+        console.log(this.state);
+      })
+  }
+
+  componentDidMount() {
+  fetch (url)
+  .then(response => response.json())
+  .then(data => {
+    lat = data.lat;
+    lon = data.lon;
+    city = data.city;
+    this.getPrediction();
+    console.log(this.state);
+  });
+
+  }
+
+   weatherPrediction = (data) => {
+    return (
+      <div className="predict-div">
+        <i key={data.day} className={`wi wi-predict wi-owm-${data.icon}`}></i>
+        <div>{data.day}</div>
+        <div>Min: {data.tempMin} <i className="wi wi-celsius"></i></div>
+        <div>Max: {data.tempMax} <i className="wi wi-celsius"></i></div>
+      </div>
+    )
+  }
+
+  currentWeather = (data) => {
+    return (
+      <div className="current-div">
+        <div className="current-info">
+        <p className="city-header">{city}</p>
+        <p className="day-header">{data.day}</p>
+        <p className="text">{data.currentTemp}<i className="wi wi-celsius"></i></p>
+        <p className="text">{data.humidity} <i className="wi wi-humidity"></i></p>
+        <p className="text">{data.windSpeed} <i className="wi wi-strong-wind"></i></p>
+        </div>
+      <div className="current-icon">
+        <i key={data.day} className={`wi wi-current wi-owm-${data.dayOrNight}${data.icon}`}></i>
+        </div>
+      </div>
+    )
+  }
+
+  render() {
+    return (
+      this.state.weatherData.map(
+        (data)=>
+          data.todayData
+          ? this.currentWeather(data)
+          : this.weatherPrediction(data)
+
+        )
+    )
+  }
+
+
+}
+
+export default Weather;
+
