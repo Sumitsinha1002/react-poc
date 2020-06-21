@@ -66,6 +66,7 @@ class Weather extends React.Component {
         <div className={`${componentName}__current-info`}>
         <p className={`${componentName}__city-header`}>{city}</p>
         <p className={`${componentName}__day-header`}>{data.day}</p>
+        <p className={`${componentName}__text`}>{data.weatherType[0].toUpperCase()+data.weatherType.slice(1)}</p>
         <p className={`${componentName}__text`}>{data.currentTemp}<i className="wi wi-celsius"></i></p>
         <p className={`${componentName}__text`}>{data.humidity} <i className="wi wi-humidity"></i></p>
         <p className={`${componentName}__text`}>{data.windSpeed} <i className="wi wi-strong-wind"></i></p>
