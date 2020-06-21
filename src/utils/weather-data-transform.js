@@ -10,7 +10,7 @@ export const transformData = (dailyWeather) => {
       icon: currentDay ? dailyWeather.current.weather[0].id : weather.weather[0].id,
       tempMax: parseInt(weather.temp.max - 273.15),
       tempMin: parseInt(weather.temp.min - 273.15),
-      currentTemp:  currentDay ? dailyWeather.current.temp : '',
+      currentTemp:  currentDay ? parseInt(dailyWeather.current.temp - 273.15) : '',
       humidity: weather.humidity,
       todayData: currentDay,
       dayOrNight: dailyWeather.current.weather[0].icon.includes('n')?'night-':'',
