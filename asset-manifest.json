@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-poc/static/css/main.36cde7c2.chunk.css",
+    "main.css": "/react-poc/static/css/main.fac8d28e.chunk.css",
     "main.js": "/react-poc/static/js/main.098ac29e.chunk.js",
     "main.js.map": "/react-poc/static/js/main.098ac29e.chunk.js.map",
     "runtime-main.js": "/react-poc/static/js/runtime-main.88cc7397.js",
@@ -8,9 +8,9 @@
     "static/js/2.d8d51337.chunk.js": "/react-poc/static/js/2.d8d51337.chunk.js",
     "static/js/2.d8d51337.chunk.js.map": "/react-poc/static/js/2.d8d51337.chunk.js.map",
     "index.html": "/react-poc/index.html",
-    "precache-manifest.2d0a9f4f5ab6304fc35599b81c7dd44c.js": "/react-poc/precache-manifest.2d0a9f4f5ab6304fc35599b81c7dd44c.js",
+    "precache-manifest.a91f84214d21a6abaaa74730267ad9fc.js": "/react-poc/precache-manifest.a91f84214d21a6abaaa74730267ad9fc.js",
     "service-worker.js": "/react-poc/service-worker.js",
-    "static/css/main.36cde7c2.chunk.css.map": "/react-poc/static/css/main.36cde7c2.chunk.css.map",
+    "static/css/main.fac8d28e.chunk.css.map": "/react-poc/static/css/main.fac8d28e.chunk.css.map",
     "static/js/2.d8d51337.chunk.js.LICENSE.txt": "/react-poc/static/js/2.d8d51337.chunk.js.LICENSE.txt",
     "static/media/note.scss": "/react-poc/static/media/goodfoot.cb655b87.ttf",
     "static/media/content.scss": "/react-poc/static/media/no-data.5558d33b.jpg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.88cc7397.js",
     "static/js/2.d8d51337.chunk.js",
-    "static/css/main.36cde7c2.chunk.css",
+    "static/css/main.fac8d28e.chunk.css",
     "static/js/main.098ac29e.chunk.js"
   ]
 }
