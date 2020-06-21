@@ -12,6 +12,11 @@
     margin: 0 auto;
     background-size: contain;
     background-image: url('./../assets/icons/no-data.jpg');
+
+    @media only screen and (max-width: 720px) {
+      height: 200px;
+    }
+
   }
 
   &__message {
@@ -33,6 +38,11 @@
     margin: 0 42%;
     cursor: pointer;
     transition: 0.2s;
+
+    @media only screen and (max-width: 720px) {
+      margin: 0 30%;
+      width:40%;
+    }
 
     &:hover {
       background-color: white;

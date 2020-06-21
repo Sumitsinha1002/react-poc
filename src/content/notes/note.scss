@@ -17,7 +17,12 @@
 	transform: rotate(2deg);
 	transform: skew(-2deg,1deg);
 	transition: transform .15s;
-	z-index: 1;
+  z-index: 1;
+
+  @media only screen and (max-width: 720px) {
+    width: 90%;
+  }
+
 
 	textarea {
 		background-color: transparent;

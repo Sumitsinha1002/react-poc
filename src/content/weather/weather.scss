@@ -5,6 +5,9 @@
     width: 40%;
     margin: 0 auto;
     display:flex;
+    @media only screen and (max-width: 720px) {
+      width: 85%;
+    }
 }
 
 .current-info {
@@ -42,6 +45,9 @@
   border: 2px solid $primary;
   transform: translateY(80%);
   color: $primary;
+  @media only screen and (max-width: 720px) {
+    width: 20%;
+  }
 }
 
 .wi-predict {
@@ -53,4 +59,7 @@
 .wi-current {
   font-size: 300px;
   color: $primary;
+  @media only screen and (max-width: 720px) {
+    font-size: 200px;
+  }
 }
