@@ -4,11 +4,11 @@ import './weather.scss';
 import './../../assets/weather-icons-master/css/weather-icons.css'
 import { transformData } from './../../utils/weather-data-transform'
 
-let url = 'http://ip-api.com/json';
+let url = 'https://api.ipdata.co/?api-key=test';
 let appId = '84c61d20a8a097b1fd8195c838ad28b7';
 weather.setLang('en');
 weather.setAPPID(appId);
-let weatherUrl = 'http://api.openweathermap.org/data/2.5/onecall?';
+let weatherUrl = 'https://api.openweathermap.org/data/2.5/onecall?';
 let lat, lon, city;
 
 class Weather extends React.Component {
@@ -39,8 +39,8 @@ class Weather extends React.Component {
   fetch (url)
   .then(response => response.json())
   .then(data => {
-    lat = data.lat;
-    lon = data.lon;
+    lat = data.latitude;
+    lon = data.longitude;
     city = data.city;
     this.getPrediction();
     console.log(this.state);

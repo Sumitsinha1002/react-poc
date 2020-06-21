@@ -19,6 +19,7 @@
 .current-icon {
   flex: 1 1 auto;
   text-align: left;
+  text-shadow: 8px 8px lightgrey;
 }
 
 .city-header {
@@ -30,8 +31,6 @@
   font-size: 2em;
   margin: 0;
 }
-
-
 
 .predict-div {
   display: inline-block;
