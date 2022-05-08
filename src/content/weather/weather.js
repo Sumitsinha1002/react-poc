@@ -34,7 +34,6 @@ class Weather extends React.Component {
             weatherData: transformedData,
           };
         });
-        console.log(this.state);
       });
   }
 
@@ -46,7 +45,6 @@ class Weather extends React.Component {
         lon = data.longitude;
         city = data.city;
         this.getPrediction();
-        console.log(this.state);
       });
   }
 

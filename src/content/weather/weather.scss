@@ -2,7 +2,6 @@
 
 .weather {
   &__current-div {
-    transform: translate(0px, 28%);
     width: 40%;
     margin: 0 auto;
     display:flex;
@@ -18,6 +17,10 @@
     @media only screen and (max-width: 720px) {
       width: 85%;
     }
+}
+
+&__text {
+  font-weight: bold;
 }
 
 &__current-info {
