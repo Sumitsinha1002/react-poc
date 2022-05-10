@@ -2,9 +2,9 @@ export const transformData = (dailyWeather) => {
   const usefulData = [];
   console.log(dailyWeather);
   const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  dailyWeather.daily.map((weather)=> {
-    var currentDay = new Date(weather.dt*1000).getDay() === new Date().getDay();
-    usefulData[new Date(weather.dt*1000).getDay()] = {
+  dailyWeather.daily.map((weather, index)=> {
+    var currentDay = weather.sunrise === dailyWeather.current.sunrise;
+    usefulData[index] = {
       day: weekday[new Date(weather.dt*1000).getDay()],
       weatherType: currentDay ? dailyWeather.current.weather[0].description : weather.weather[0].description,
       icon: currentDay ? dailyWeather.current.weather[0].id : weather.weather[0].id,
@@ -17,5 +17,6 @@ export const transformData = (dailyWeather) => {
       windSpeed: weather.wind_speed+' km/h'
     }
   })
+  console.log(usefulData);
   return usefulData;
 }
